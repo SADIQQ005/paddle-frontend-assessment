@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "./Form";
+import Form from "../Form";
 
 export default function SideNav({ setOpened }) {
   const formData = [
@@ -10,9 +10,9 @@ export default function SideNav({ setOpened }) {
 
   return (
     <div
-      className="text-white text-center h-full py-10 px-24 antialiased
+      className="text-white text-center py-10 md:px-24 px-4 antialiased
      tracking-wide text-2xl drop-shadow-md font-semibold bg-[#160133] 
-     w-[600px] float-right z-10 absolute"
+     md:w-[600px] w-[300px] float-right z-10 absolute"
     >
       <div
         onClick={() => setOpened(false)}
@@ -23,7 +23,7 @@ export default function SideNav({ setOpened }) {
         x
       </div>
 
-      <h2 className="pt-10 pb-12">
+      <h2 className="pt-10 pb-12 text-[18px] mt-8">
         Hey, we are still in works, <br /> but you can send us a message!
       </h2>
 
@@ -35,7 +35,7 @@ export default function SideNav({ setOpened }) {
           </p>
           <textarea
             className="py-4 px-6 resize-none rounded-lg w-full focus:outline-0 text-gray-900 text-[12px]"
-            placeholder="Enter your first name"
+            placeholder="Enter A Topic, Like 'Channel Problem'"
           />
         </div>
       </div>

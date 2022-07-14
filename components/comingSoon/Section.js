@@ -9,10 +9,10 @@ function Section() {
   ];
   return (
     <div className="flex flex-col justify-center items-center text-center text-white mt-[80px]">
-      <h2 className="font-bold w-[600px] leading-[50px] tracking-wider text-4xl uppercase">
+      <h2 className="font-bold md:w-[600px] w-[300px] leading-[50px] tracking-wider text-4xl uppercase">
         something awesome is coming soon
       </h2>
-      <p className="mt-6 text-sm font-light w-[500px] tracking-wider leading-6">
+      <p className="mt-6 text-sm font-light md:w-[500px] tracking-wider leading-6">
         Your all in one affiliate marketing tracking sofware{" "}
         <span className="font-bold">track, automate</span> and{" "}
         <span className="font-bold">optimize</span> your campaigns
@@ -29,7 +29,7 @@ function Section() {
           );
         })}
       </div>
-      <div className="mt-7 space-x-6">
+      <div className="mt-7 md:space-x-6 space-x-4">
         <input
           className="border-0 text-sm bg-inherit px-3 py-2 focus:outline-0 border-b"
           placeholder="First Name.."
@@ -39,12 +39,12 @@ function Section() {
           placeholder="Last Name.."
         />
       </div>
-      <div className="mt-7 flex">
+      <div className="mt-20 flex">
         <input
-          className="py-2 px-6 w-80 text-sm text-gray-800 rounded-full focus:outline-0"
+          className="py-2 px-6 md:w-80 text-sm text-gray-800 rounded-full focus:outline-0"
           placeholder="Enter your email address.."
         />
-        <p className="uppercase relative w-48 -ml-16 text-[10px] bg-[#271ac1] tracking-wider rounded-full py-3 px-6">
+        <p className="uppercase relative md:w-48  -ml-16 text-[10px] bg-[#271ac1] tracking-wider rounded-full py-3 px-6">
           join our waiting list
         </p>
       </div>
