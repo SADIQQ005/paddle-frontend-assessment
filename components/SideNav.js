@@ -1,39 +1,36 @@
 import React from "react";
+import Form from "./Form";
 
-export default function SideNav() {
+export default function SideNav({ setOpened }) {
+  const formData = [
+    { lable: "First Name", placeholder: "Enter your first name" },
+    { lable: "Last Name", placeholder: "Enter your last name" },
+    { lable: "Email Address", placeholder: "Enter your email address" },
+  ];
+
   return (
-    <div className="text-white text-center px-16 antialiased tracking-wide text-2xl font-semibold bg-pink-800 w-[600px] float-right z-10 h-full absolute">
+    <div
+      className="text-white text-center h-full py-10 px-24 antialiased
+     tracking-wide text-2xl drop-shadow-md font-semibold bg-[#160133] 
+     w-[600px] float-right z-10 absolute"
+    >
+      <div
+        onClick={() => setOpened(false)}
+        className="bg-white text-[#271ac1] w-16 h-16 cursor-pointer
+       flex justify-center items-center absolute top-8 -right-4 
+       overflow-visible rounded-full"
+      >
+        x
+      </div>
+
       <h2 className="pt-10 pb-12">
         Hey, we are still in works, <br /> but you can send us a message!
       </h2>
 
-      <div className="space-y-5">
+      <div className="space-y-2">
+        <Form formData={formData} />
         <div>
-          <p className="text-left font-light mb-3 text-[13px]">First Name</p>
-          <input
-            className="py-4 px-6 rounded-lg w-full focus:outline-0 text-gray-900 text-[12px]"
-            placeholder="Enter your first name"
-          />
-        </div>
-
-        <div>
-          <p className="text-left font-light mb-3 text-[13px]">Last Name</p>
-          <input
-            className="py-4 px-6 rounded-lg w-full focus:outline-0 text-gray-900 text-[12px]"
-            placeholder="Enter your Last name"
-          />
-        </div>
-
-        <div>
-          <p className="text-left font-light mb-3 text-[13px]">Email Address</p>
-          <input
-            className="py-4 px-6 rounded-lg w-full focus:outline-0 text-gray-900 text-[12px]"
-            placeholder="Enter your email address"
-          />
-        </div>
-
-        <div>
-          <p className="text-left font-light mb-3 text-[13px] capitalize">
+          <p className="text-left font-light mb-2 text-[13px] capitalize">
             Tell us what you need help with:
           </p>
           <textarea
@@ -42,7 +39,7 @@ export default function SideNav() {
           />
         </div>
       </div>
-      <div className="py-3 px-6 w-44 rounded-full bg-[#271ac1] mt-6 text-[16px] uppercase font-semibold">
+      <div className="py-3 px-6 w-44 rounded-full bg-[#271ac1] mt-4 text-[16px] uppercase font-semibold">
         send now
       </div>
     </div>

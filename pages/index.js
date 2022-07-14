@@ -9,13 +9,15 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-[#160133] h-full mx-24 relative">
-        {opened ? (
-          <SideNav />
-        ) : (
-          ""
-        )}
-        <div className="relative z-0">
+      <div className="bg-[#160133] h-full overflow-hidden mx-24 relative">
+        {opened ? <SideNav setOpened={setOpened} opened={opened} /> : ""}
+        <div
+          className={`relative z-0 ${
+            opened
+              ? "blur-md transition delay-800 -translate-y-20 duration-500 ease-in-out"
+              : "blur-none transition delay-800 duration-500 ease-out"
+          }`}
+        >
           <Header opened={opened} setOpened={setOpened} />
           <Section />
           <Footer />
