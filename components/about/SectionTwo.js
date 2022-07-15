@@ -15,7 +15,7 @@ export default function SectionTwo() {
         </p>
       </div>
 
-      <div className="lg:flex-auto w-screen lg:w-[50%] bg-[#311254] lg:h-[450px] w-[250px] px-16 pt-16 pb-12">
+      <div className="lg:flex-auto w-screen lg:w-[50%] bg-[#311254] lg:h-[450px] px-16 pt-16 pb-12">
         <div className="flex">
           <p className="border-b-2 border-white w-16 pl-4">02</p>
           <p className="text-[13px] uppercase pt-4 pl-3">growing with you</p>
